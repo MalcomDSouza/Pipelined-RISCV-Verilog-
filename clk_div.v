@@ -18,10 +18,6 @@ module clk_div (
         end
     end
 
-
-//Top riscvtest(clk_out,rst,risc_out);
-
-
 endmodule
 
 
