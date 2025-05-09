@@ -9,7 +9,6 @@ input signed [size-1:0]s3,
 input [1:0]sel,
 output reg signed [size-1:0]out);
 
-//assign out = (sel[1] == 0)?(se;
 
 always@(*)begin
     
