@@ -17,38 +17,7 @@ output reg [1:0]Fwd_A,
 output reg [1:0]Fwd_B
 );
     
-//always@(*) begin     
 
-//    if(reset==0) begin
-//       Fwd_A <= 0;
-//       Fwd_B <= 0;end
-       
-//    else begin
-    
-//        if(((RegWrite_EX_MEM) && (writeReg_EX_MEM != 0)) && //EX Forwarding
-//           (writeReg_EX_MEM == readReg1_ID_EX))begin           
-//           Fwd_A <= 2'b10; end
-//        if(((RegWrite_EX_MEM) && (writeReg_EX_MEM != 0)) && //EX Forwarding
-//           (writeReg_EX_MEM == readReg2_ID_EX))begin           
-//           Fwd_B <= 2'b10; end
-           
-//        if((((RegWrite_MEM_WB) && (writeReg_MEM_WB != 0)) && //MEM Forwarding
-//           (writeReg_MEM_WB == readReg1_ID_EX)) && 
-//           !(((RegWrite_EX_MEM) && (writeReg_EX_MEM != 0)) && //EX Forwarding
-//           (writeReg_EX_MEM == readReg1_ID_EX)))begin           
-//           Fwd_A <= 2'b01; end           
-//        if((((RegWrite_MEM_WB) && (writeReg_MEM_WB != 0)) && //MEM Forwarding
-//           (writeReg_MEM_WB == readReg2_ID_EX)) && 
-//           !(((RegWrite_EX_MEM) && (writeReg_EX_MEM != 0)) && //EX Forwarding
-//           (writeReg_EX_MEM == readReg2_ID_EX)))begin           
-//           Fwd_B <= 2'b01; end     
-           
-//        else begin
-//            Fwd_A <= 0;
-//            Fwd_B <= 0;end         
-       
-//       end
-//end
 always @(*) begin     
     if (reset == 0) begin
         Fwd_A <= 2'b00;
